@@ -24,16 +24,19 @@ various document elements to help navigate the document. For example, headings
 are displayed in a large font. Inline markup is also styled to make them stand
 out
 
-Edited documents are saved as reStructuredText. GitHub: versioning
+Edited documents are saved as reStructuredText. GitHub: versioning! Editor
+works on a repository level. Navigate to a repository. File tree displayed on
+left. Commits to structed branch.
 
-Collaborative editing.
+Collaborative editing. Simultaneous editing by multiple users. They need push
+access to the repository.
 
 
 Limitations
 ~~~~~~~~~~~
 
-Not all document elements are supported. List them. Others are described in the
-next section.
+Not all document elements are supported. Supported elements are discussed in
+the next section.
 
 Many writing aids can be added. For example, popping up a list of available
 reference targets. Inter-file cross-references.
