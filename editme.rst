@@ -90,3 +90,19 @@ Custom directives (future).
 .. _WYSIWYM: https://en.wikipedia.org/wiki/WYSIWYM
 
 .. _reStructuredText: https://en.wikipedia.org/wiki/ReStructuredText
+
+
+Future
+------
+
+.. Is it a good idea to include this?
+
+Section outline
+
+Support all rST elements, Sphinx
+
+Highlight changes since last commit
+
+Comments annotated with the user name
+
+Backends: GitLab, DropBox, ...
