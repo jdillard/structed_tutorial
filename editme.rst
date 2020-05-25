@@ -18,22 +18,23 @@ the publishing stage, styles are applied to represent these semantics.
 stand out.
 
 Documents are stored in the reStructuredText_ format, an open, extensible
-lightweight markup language suited fro publishing to a multitude of formats
+`lightweight markup language`_ suited fro publishing to a multitude of formats
 including HTML, EPub and PDF. *struct:ed* facilitates editing of
 reStructuredText documents by providing the user with an environment that frees
 the user from having to remember the syntax for all document elements.
-Additionally, it respresents the document in a format that is easy to navigate.
+Additionally, it represents the document in a format that is easy to navigate,
+for example by displaying the section titles in a larger font.
 
 The reStructuredText documents need to be stored somewhere, of course. The
-first backend *struct:ed* supports is GitHub. Documents are stored in a git
+first backend *struct:ed* supports is **GitHub**. Documents are stored in a git
 repository and their edit history is thus being preserved. *struct:ed* works on
 a repository level; the panel on the left shows a tree of the files present on
 in the repository. Clicking a file will open it for editing. Clicking the
 *Commit* button at the top right will commit changes to all files to the
 *structed* branch of the repository.
 
-Finally, *struct:ed* also supports collaborative editing. Several users can
-edit a document at the same time. Their changes will be visible immediate by
+Finally, *struct:ed* also supports **collaborative editing**. Several users can
+edit a document simultaneously. Their changes will be immediately visible to
 others editing the same document. Note that all users need *push* access to a
 repository to be able to edit documents stored in it.
 
@@ -41,41 +42,124 @@ repository to be able to edit documents stored in it.
 Current Limitations
 ~~~~~~~~~~~~~~~~~~~
 
-Not all document elements are supported. Supported elements are discussed in
-the next section.
+As this is a only a preview version of struct:ed, there are some limitations
+you should be aware of:
 
-Many writing aids can be added. For example, popping up a list of available
-reference targets. Inter-file cross-references.
+* Not all reStructuredText document elements are supported. Those that are
+  currently supported are discussed in the next section.
+
+* There are many opportunities for facilitating editing documents, such as
+  popping up a list of available reference targets when inserting a reference.
+  However, very few of these writing aids are available at this point. Please
+  be patient.
 
 
 Editing a Document
 ------------------
 
-Toolbar, keyboard shortcuts, input rules
+The toolbar at the top helps inserting structural, body and inline elements
+into the document. Hover your mouse pointer over each of the buttons to learn
+what they do. In addition to a label, the tooltip also includes an input rule
+(in orange) and sometimes a keyboard shortcut.
 
-Toolbar doubles as a cheat sheet. Both keyboard shortcuts and input rules (in
-orange) are shown in the tooltip when hovering the mouse pointer over the
-corresponding menu bar button.
+**Input rules** allow applying inline styles or inserting document elements by
+means of specific character patterns. These have been chosen to be the same as
+the corresponding reStructuredText syntax if possible, or similar otherwise.
 
-Commit
+Hint: use the toolbar as a cheat sheet to quickly look up input rules and
+keyboard shortcuts.
 
 
 Structural Elements
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
-Section titles or headings. ``#``
+Structural elements include section titles or **headings**. Use the heading
+toolbar button to toggle between a plain paragraph and a heading. With the text
+cursor positioned on a heading, use the right/left arrow buttons to in/decrease
+the heading level. Go ahead, try this on the next paragraph!
 
-Try it, create a level-4 heading below:
+I want to be a heading!
 
-Transitions
+You can set the heading level in a single step by using the keyboard shortcut
+corresponding to the heading level (1 through 6). Use *Ctrl-Alt-0* (zero) to
+reset a title to a paragraph. *Alt-Right* and *Alt-Left* increase and decrease
+the heading level.
+
+To create a new heading, start a paragraph with a series of hashes (``#``)
+followed by a space. The number of hashes indicates the heading level. You can
+also convert an existing paragraph to a heading by inserting hashes and a space
+at the front of the paragraph. Try creating a new level-3 heading below.
+
+Note that struct:ed will enforce a consistent document structure by
+automatically fixing heading levels. For example, if you insert a level-6
+heading below a level-2 heading, it will be changed to a level-3 heading.
+
+The other structural element is the **transition**, which divides the section.
+Enter four consecutive hyphens (``----``) at the start of a paragraph to insert
+a transition. Why don't you add a transition below?
 
 
 Body Elements
-~~~~~~~~~~~~~
+-------------
 
-Paragraph is the default body element. Ctrl-Alt-0.
 
-Inline markup. ``::``also at front of paragraph.
+Paragraphs
+~~~~~~~~~~
+
+The default body element, created by pressing *Enter*, is the paragraph. You
+can convert some other types of body elements to a paragraph by means of the
+*Ctrl-Alt-0* shortcut.
+
+Inside paragraphs, **inline markup** can be applied to words or phrases. These
+markup constructs have simple input rules:
+
+* **emphasis**: wrap text in single asterisks (``*``)
+
+* **strong emphasis**: wrap text in double asterisks (``**``)
+
+* **literals**: wrap text in double backticks (``````)
+
+This markup can be also be applied to selected text by using the keyboard
+shortcuts shown in the tooltips.
+
+**Subscript** and **superscript** employ the generic reStructuredText
+interpreted text role syntax. ``:sub:`` or ``:sup:`` followed by the text to
+mark up enclosed in single backticks (`````). For example, ``x :sup:super!``
+results in :sup:`super!`.
+
+**References** create internal or external hyperlinks. When not specifying a
+target, the reference links to the target matching the marked name. For
+example, ```my target`_``creates a reference to ``mytarget``. To link to
+``mytarget`` using a different link label, specify the target within
+less/greater than characters, like so: ```My Label <my target>`_``.
+
+.. TODO: complete
+
+See target below ...
+
+Finally, **substitution references** are labels that will be replaced by
+another when a document is published. The corresponding `substitution
+definition`_ determines the text that will be |substituted|. You can create a
+substitution reference by wrapping text within vertical lines (``|``).
+
+Note that reStructuredText does not support nesting inline markup. However,
+since we only need to describe semantics and not presentation, this doesn't
+have to be problematic. `Custom interpreted text roles`_ allow for extra
+classes of inline markup to be defined which can be styled as required on
+publication.
+
+
+Block Quotes
+~~~~~~~~~~~~
+
+The left/right toolbar buttons and corresponding keyboard shortcuts
+increase/decrease the block quote level of a paragraph. Entering two spaces at
+the front of a paragraph will also increase the quote level. Let's transform
+the following paragraph into a block quote by any means you fancy:
+
+Reality is merely an illusion, albeit a very persistent one.
+
+``::``also at front of paragraph. only one
 
 Literal block. For code.
 
@@ -85,9 +169,13 @@ Comments.
 
 
 Directives
-~~~~~~~~~~
+----------
+
+.. _targets:
 
 target (anchor), optional alias
+
+.. _substitution definition:
 
 substitution definition
 
