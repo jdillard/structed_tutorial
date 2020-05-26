@@ -91,8 +91,9 @@ also convert an existing paragraph to a heading by inserting hashes and a space
 at the front of the paragraph. Try creating a new level-3 heading below.
 
 Note that struct:ed will enforce a consistent document structure by
-automatically fixing heading levels. For example, if you insert a level-6
-heading below a level-2 heading, it will be changed to a level-3 heading.
+automatically fixing heading levels. For example, if you try to insert a
+level-6 heading below a level-2 heading, it will be changed to a level-3
+heading.
 
 The other structural element is the **transition**, which divides the section.
 Enter four consecutive hyphens (``----``) at the start of a paragraph to insert
@@ -206,9 +207,7 @@ below. Be sure to perform some experiments!
 
   This is the second paragraph of the first list item.
 
-* The second list item featuring a sub-list.
-
-  - Use *Alt-Right* or *Tab* to increase the list item level.
+* Use *Alt-Right* or *Tab* to increase the list item level.
 
   - Use *Alt-Left* or *Shift-Tab* to decrease the list item level.
 
