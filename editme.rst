@@ -159,13 +159,79 @@ the following paragraph into a block quote by any means you fancy:
 
 Reality is merely an illusion, albeit a very persistent one.
 
-``::``also at front of paragraph. only one
 
-Literal block. For code.
+Literal Blocks
+~~~~~~~~~~~~~~
 
-Enumerated List
+Literal blocks can be used for code snippets or other preformatted text. Use
+the *Ctrl-Alt-=* shortcut to convert a paragraph to a literal block or enter
+two colons (``::``) at the start of a paragraph. Line feed are inserted into
+the literal block when pressing *Enter*. To exit from the literal block using
+*Cmd-Enter* on Mac or *Ctrl-Enter* on other platforms. Below is an example of a
+literal block:
 
-Comments.
+::
+
+  for i in range(5):
+      print(i)
+
+Note that inline markup is not supported within literal blocks.
+
+
+Lists
+~~~~~
+
+To convert a paragraph to a **bullet list** item, use the *Ctrl-Alt-B*
+shortcut. A new bullet list can be created by starting a paragraph with a
+hyphen (``-``) and a space, after which you can start entering the list item
+text. Pressing *Enter* will create a new list item. At this point you have
+three options:
+
+1. Enter the text for the new list item.
+
+2. Press *Enter* to end the list.
+
+3. Press *Backspace* to remove the second bullet. The cursor is now at the
+   start of the second paragraph of the first list item.
+
+**Enumerated lists** are very similar to bullet lists. They can be created by
+starting a paragrah with ``1.`` followed by a space. Paragraphs can be
+transformed to a list item using the *Ctrl-Alt-E* keyboard shortcut.
+
+List items can contain any number of body elements. These are not limited to
+paragraphs, so you can include a literal block or another list, as illustrated
+below. Be sure to perform some experiments!
+
+* This is a plain paragraph with *inline markup*.
+
+  This is the second paragraph of the first list item.
+
+* The second list item featuring a sub-list.
+
+  - Use *Alt-Right* or *Tab* to increase the list item level.
+
+  - Use *Alt-Left* or *Shift-Tab* to decrease the list item level.
+
+  - Use *Ctrl-Alt-E* to transform this list to an enumerated list.
+
+* ::
+    This is a literal block...
+
+    followed by a block quote
+
+  1. and an enumerated list
+
+  2. with two list items
+
+
+Comments
+~~~~~~~~
+
+Comments are discarded when plublishing the document. Use these to keep track
+of to-do items or meta-discussions. Create a comment by starting a paragraph
+with double full stop characters (``..``).
+
+.. TODO: improve wording of this section
 
 
 Directives
