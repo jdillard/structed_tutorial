@@ -214,6 +214,7 @@ below. Be sure to perform some experiments!
   - Use *Ctrl-Alt-E* to transform this list to an enumerated list.
 
 * ::
+
     This is a literal block...
 
   1. followed by an enumerated list
