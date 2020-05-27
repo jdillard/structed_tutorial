@@ -125,12 +125,12 @@ shortcuts shown in the tooltips.
 
 **Subscript** and **superscript** employ the generic reStructuredText
 interpreted text role syntax. ``:sub:`` or ``:sup:`` followed by the text to
-mark up enclosed in single backticks (`````). For example, ``x :sup:super!``
+mark up enclosed in single backticks (`````). For example, ``:sup:`super!```
 results in :sup:`super!`.
 
 **References** create internal or external hyperlinks. When not specifying a
 target, the reference links to the target matching the marked name. For
-example, ```my target`_``creates a reference to ``mytarget``. To link to
+example, ```my target`_`` creates a reference to ``mytarget``. To link to
 ``mytarget`` using a different link label, specify the target within
 less/greater than characters, like so: ```My Label <my target>`_``.
 
