@@ -214,11 +214,10 @@ below. Be sure to perform some experiments!
   - Use *Ctrl-Alt-E* to transform this list to an enumerated list.
 
 * ::
+
     This is a literal block...
 
-    followed by a block quote
-
-  1. and an enumerated list
+  1. followed by an enumerated list
 
   2. with two list items
 
