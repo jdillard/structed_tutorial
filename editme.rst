@@ -214,7 +214,6 @@ below. Be sure to perform some experiments!
   - Use *Ctrl-Alt-E* to transform this list to an enumerated list.
 
 * ::
-
     This is a literal block...
 
   1. followed by an enumerated list
@@ -247,9 +246,9 @@ custom interpreted text role
 
 Custom directives (future).
 
-.. _WYSIWYM: https://en.wikipedia.org/wiki/WYSIWYM
+.. _wysiwym: https://en.wikipedia.org/wiki/WYSIWYM
 
-.. _reStructuredText: https://en.wikipedia.org/wiki/ReStructuredText
+.. _restructuredtext: https://en.wikipedia.org/wiki/ReStructuredText
 
 .. _lightweight markup language: https://en.wikipedia.org/wiki/Lightweight_markup_language
 
