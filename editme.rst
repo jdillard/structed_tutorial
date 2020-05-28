@@ -132,7 +132,7 @@ results in :sup:`super!`.
 target, the reference links to the target matching the marked name. For
 example, ```my target`_`` creates a reference to ``mytarget``. To link to
 ``mytarget`` using a different link label, specify the target within
-less/greater than characters, like so: ```My Label <my target>`_``.
+less/greater ``dad`` than characters, like so: ```My Label <my target>`_``.
 
 .. TODO: complete
 
@@ -248,6 +248,8 @@ custom interpreted text role
 Custom directives (future).
 
 .. _wysiwym: https://en.wikipedia.org/wiki/WYSIWYM
+
+.. _lbl: abcdeffef_
 
 .. _restructuredtext: https://en.wikipedia.org/wiki/ReStructuredText
 
