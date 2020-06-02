@@ -97,7 +97,7 @@ level-3 heading.
 
 The other structural element is the **transition** which divides the section.
 Enter four consecutive hyphens (``----``) at the start of a paragraph to insert
-a transition. Why don't you add a transition below?
+a transition. Let's insert a transition below this paragraph.
 
 
 Body Elements
@@ -153,8 +153,8 @@ Block Quotes
 
 The left/right toolbar buttons and corresponding keyboard shortcuts
 increase/decrease the block quote level of a paragraph. Entering two spaces at
-the front of a paragraph will also increase the quote level. Let's transform
-the following paragraph into a block quote by any means you fancy:
+the front of a paragraph will also increase the quote level. Why don't you
+transform the following paragraph into a block quote by any means you fancy:
 
 Reality is merely an illusion, albeit a very persistent one.
 
@@ -164,7 +164,7 @@ Literal Blocks
 
 Literal blocks can be used for code snippets or other preformatted text. Use
 the *Ctrl-Alt-=* shortcut to convert a paragraph to a literal block or enter
-two colons (``::``) at the start of a paragraph. Line feed are inserted into
+two colons (``::``) at the start of a paragraph. A line feed is inserted into
 the literal block when pressing *Enter*. To exit from the literal block using
 *Cmd-Enter* on Mac or *Ctrl-Enter* on other platforms. Below is an example of a
 literal block:
@@ -183,10 +183,10 @@ Lists
 To convert a paragraph to a **bullet list** item, use the *Ctrl-Alt-B*
 shortcut. A new bullet list can be created by starting a paragraph with a
 hyphen (``-``) and a space, after which you can start entering the list item
-text. Pressing *Enter* will create a new list item. At this point you have
-three options:
+text. Pressing *Enter* at the end of a list item paragraph creates a new list
+item. At this point you have three options:
 
-1. Enter the text for the new list item.
+1. Enter the text for the new list item paragraph.
 
 2. Press *Enter* to end the list.
 
@@ -195,11 +195,12 @@ three options:
 
 **Enumerated lists** are very similar to bullet lists. They can be created by
 starting a paragrah with ``1.`` followed by a space. Paragraphs can be
-transformed to a list item using the *Ctrl-Alt-E* keyboard shortcut.
+transformed to an enumerated list item using the *Ctrl-Alt-E* keyboard
+shortcut.
 
 List items can contain any number of body elements. These are not limited to
 paragraphs, so you can include a literal block or another list, as illustrated
-below. Be sure to perform some experiments!
+below. Don't be afraid to perform some experiments here!
 
 * This is a plain paragraph with *inline markup*.
 
@@ -209,7 +210,7 @@ below. Be sure to perform some experiments!
 
   - Use *Alt-Left* or *Shift-Tab* to decrease the list item level.
 
-  - Use *Ctrl-Alt-E* to transform this list to an enumerated list.
+  - Use *Ctrl-Alt-E* to transform this sub-list to an enumerated list.
 
 * ::
 
@@ -223,9 +224,10 @@ below. Be sure to perform some experiments!
 Comments
 ~~~~~~~~
 
-Comments are discarded when plublishing the document. Use these to keep track
-of to-do items or meta-discussions. Create a comment by starting a paragraph
-with double full stop characters (``..``).
+Comments are discarded when publishing the document. Use these to keep track of
+to-do items or meta-discussions. Create a comment by starting a paragraph with
+double full stop characters (``..``). You can also transform an existing
+paragraph to a comment with the help of the *Ctrl-Alt-C* keyboard shortcut.
 
 .. TODO: improve wording of this section
 
