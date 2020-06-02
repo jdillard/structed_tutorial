@@ -18,24 +18,25 @@ the publishing stage, styles are applied to represent these semantics.
 stand out.
 
 Documents are stored in the reStructuredText_ format, an open, extensible
-`lightweight markup language`_ suited fro publishing to a multitude of formats
-including HTML, EPub and PDF. *struct:ed* facilitates editing of
-reStructuredText documents by providing the user with an environment that frees
-the user from having to remember the syntax for all document elements.
-Additionally, it represents the document in a format that is easy to navigate,
-for example by displaying the section titles in a larger font.
+`lightweight markup language`_ that supports publishing to a multitude of
+formats including HTML, EPub and PDF. *struct:ed* facilitates editing of
+reStructuredText documents by providing an environment that frees the user from
+having to remember the syntax for all of the different document elements and
+eliminating the occurrence of syntax errors. Additionally, it represents the
+document in a format that is easy to navigate, for example by displaying the
+section titles in a larger font.
 
-The reStructuredText documents need to be stored somewhere, of course. The
+These reStructuredText documents need to be stored somewhere, of course. The
 first backend *struct:ed* supports is **GitHub**. Documents are stored in a git
 repository and their edit history is thus being preserved. *struct:ed* works on
-a repository level; the panel on the left shows a tree of the files present on
-in the repository. Clicking a file will open it for editing. Clicking the
-*Commit* button at the top right will commit changes to all files to the
-*structed* branch of the repository.
+a repository level; the panel on the left shows a tree of the files in the
+repository. Clicking a file will open it for editing. Clicking the *Commit*
+button at the top right will commit changes to all files to the *structed*
+branch of the repository.
 
-Finally, *struct:ed* also supports **collaborative editing**. Several users can
-edit a document simultaneously. Their changes will be immediately visible to
-others editing the same document. Note that all users need *push* access to a
+Finally, *struct:ed* supports **collaborative editing**. Several users can edit
+a document simultaneously. Their changes will be immediately visible to others
+editing the same document. Note that all users need *push* access to a
 repository to be able to edit documents stored in it.
 
 
@@ -50,8 +51,7 @@ you should be aware of:
 
 * There are many opportunities for facilitating editing documents, such as
   popping up a list of available reference targets when inserting a reference.
-  However, very few of these writing aids are available at this point. Please
-  be patient.
+  However, very few of these writing aids are available at this point.
 
 
 Editing a Document
@@ -80,22 +80,22 @@ the heading level. Go ahead, try this on the next paragraph!
 
 I want to be a heading!
 
-You can set the heading level in a single step by using the keyboard shortcut
-corresponding to the heading level (1 through 6). Use *Ctrl-Alt-0* (zero) to
-reset a title to a paragraph. *Alt-Right* and *Alt-Left* increase and decrease
-the heading level.
+You can set the heading level in a single step by using the *Ctrl-Alt-<number>*
+keyboard shortcut corresponding to the heading level (1 through 6). Use
+*Ctrl-Alt-0* (zero) to reset a title to a paragraph. *Alt-Right* and *Alt-Left*
+increase and decrease the heading level.
 
 To create a new heading, start a paragraph with a series of hashes (``#``)
-followed by a space. The number of hashes indicates the heading level. You can
+followed by a space. The number of hashes determines the heading level. You can
 also convert an existing paragraph to a heading by inserting hashes and a space
 at the front of the paragraph. Try creating a new level-3 heading below.
 
 Note that struct:ed will enforce a consistent document structure by
 automatically fixing heading levels. For example, if you try to insert a
-level-6 heading below a level-2 heading, it will be changed to a level-3
-heading.
+level-6 heading below a level-2 heading, it will automatically be changed to a
+level-3 heading.
 
-The other structural element is the **transition**, which divides the section.
+The other structural element is the **transition** which divides the section.
 Enter four consecutive hyphens (``----``) at the start of a paragraph to insert
 a transition. Why don't you add a transition below?
 
@@ -124,30 +124,28 @@ This markup can be also be applied to selected text by using the keyboard
 shortcuts shown in the tooltips.
 
 **Subscript** and **superscript** employ the generic reStructuredText
-interpreted text role syntax. ``:sub:`` or ``:sup:`` followed by the text to
-mark up enclosed in single backticks (`````). For example, ``:sup:`super!```
+interpreted text role syntax. Type ``:sub:`` or ``:sup:`` followed by the text
+to mark up enclosed in single backticks (`````). For example, ``:sup:`super!```
 results in :sup:`super!`.
 
 **References** create internal or external hyperlinks. When not specifying a
-target, the reference links to the target matching the marked name. For
-example, ```my target`_`` creates a reference to ``mytarget``. To link to
-``mytarget`` using a different link label, specify the target within
-less/greater ``dad`` than characters, like so: ```My Label <my target>`_``.
+target, the reference links to the target matching the marked name (targets are
+discussed below). For example, ```mytarget`_`` creates a reference to
+``mytarget``. To link to ``mytarget`` using a different link label, specify the
+target within less/greater than characters, like so: ```My Label
+<mytarget>`_``. This reference is displayed as follows: `My Label
+<mytarget_>`_. Clicking the reference will pop up a tooltip that allows you to
+change the target. The label can be edited just like normal text.
 
-.. TODO: complete
-
-See target below ...
-
-Finally, **substitution references** are labels that will be replaced by
-another when a document is published. The corresponding `substitution
+Finally, **substitution references** are labels that are to be replaced by a
+text string when a document is published. The corresponding `substitution
 definition`_ determines the text that will be |substituted|. You can create a
 substitution reference by wrapping text within vertical lines (``|``).
 
 Note that reStructuredText does not support nesting inline markup. However,
-since we only need to describe semantics and not presentation, this doesn't
-have to be problematic. `Custom interpreted text roles`_ allow for extra
-classes of inline markup to be defined which can be styled as required on
-publication.
+since we only need to describe semantics and not presentation, this is not
+necessarily a problem. `Custom interpreted text roles`_ allow for extra classes
+of inline markup to be defined which can be styled as required on publication.
 
 
 Block Quotes
