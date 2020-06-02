@@ -146,6 +146,10 @@ Note that reStructuredText does not support nesting inline markup. However,
 since we only need to describe semantics and not presentation, this is not
 necessarily a problem. `Custom interpreted text roles`_ allow for extra classes
 of inline markup to be defined which can be styled as required on publication.
+These can be used to mark inline text using the interpreted text role syntax.
+Enterthe custom role name enclosed in colons (``:``) followed by the text to
+mark up enclosed in single backticks (`````). For example, :myrole:`this text`
+is tagged with a custom role.
 
 
 Block Quotes
@@ -235,25 +239,70 @@ paragraph to a comment with the help of the *Ctrl-Alt-C* keyboard shortcut.
 Directives
 ----------
 
+Directives are an extension mechanism for reStructuredText. Users may define
+custom directives, but a set of directives are already included in the
+reStructuredText specification. struct:ed currently supports the standard
+directives listed below.
+
 .. _targets:
 
-target (anchor), optional alias
 
-.. _substitution definition:
+Target
+~~~~~~
 
-substitution definition
+A target directive provides an anchor for references. The target label is a
+unique ID that to identify the target. The target directive above has the label
+*targets* provides an anchor for this paragraph. If the optional *alias target*
+is filled in, the label is interpreted as an alias for the alias target. For
+example:
 
-custom interpreted text role
+.. _alias_for_targets: targets_
 
-Custom directives (future).
+An alias target can also be a URL. This allows you to define short aliases for
+URLs you link to in several places:
 
 .. _wysiwym: https://en.wikipedia.org/wiki/WYSIWYM
 
-.. _lbl: abcdeffef_
-
 .. _restructuredtext: https://en.wikipedia.org/wiki/ReStructuredText
 
-.. _lightweight markup language: https://en.wikipedia.org/wiki/Lightweight_markup_language
+.. _lightweight markup language: https://en.wikipedia.org/wiki/Lightweightmarkuplanguage
+
+You can create a new target by means of the ``._`` input rule. After entering
+the target label, press *Enter* to exit the directive, or input a colon (``:``)
+to add an alias target.
+
+.. _substitution definition:
+
+
+Subtitution definition
+~~~~~~~~~~~~~~~~~~~~~~
+
+The substitution definition directive specifies the replacement text for
+substitutions.
+
+.. |substituted| replace:: replaced
+
+The ``.|`` input rule creates a new substitution definition. After entering the
+label, typing a vertical bar (``|``) will move the cursor to the substitution
+content field.
+
+.. _custom interpreted text roles:
+
+
+Custom interpreted text role
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The role directive can be used to define a custom inline text role. You can
+optionally specify a base role and one or more classes. Refer to the
+`reStructuredText documentation
+<https://docutils.sourceforge.io/docs/ref/rst/directives.html#custom-interpreted-text-roles>`__
+for details.
+
+.. role:: myrole
+
+The ``.r`` input rule creates a new role directive. After entering the role
+name, the open brace (``(``) moves the cursor to the optional base role field.
+The down arrow moves the cursor to the class field.
 
 
 Future
