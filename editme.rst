@@ -308,14 +308,19 @@ The down arrow moves the cursor to the class field.
 Future
 ------
 
-.. Is it a good idea to include this?
+While there is plenty of work left to fix issues in the existing set of
+features, there's already plenty of ideas for enhancing struct:ed. Here's a
+basic list:
 
-Section outline
+* extend reStructuredText support: images, tables, Sphinx directives, ...
 
-Support all rST elements, Sphinx
+* section outline view for easy navigation of  documents
 
-Highlight changes since last commit
+* highlight changes made since last commit (colored based on who made these
+  changes)
 
-Comments annotated with the user name
+* annotate comments with the user name
 
-Backends: GitLab, DropBox, ...
+* more backends: GitLab, DropBox, ...
+
+So, stay tuned!
