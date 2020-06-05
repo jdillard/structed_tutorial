@@ -7,7 +7,7 @@ the markup language upon which *struct:ed* builds.
 
 
 What is struct:ed?
-------------------
+==================
 
 *struct:ed* is a WYSIWYM_ editor. This means that documents are represented in
 a structured way, not necessarily reflecting the look of the final, published
@@ -17,14 +17,14 @@ the publishing stage, styles are applied to represent these semantics.
 *Italics* and **bold** font are typically employed to make emphasized text
 stand out.
 
-Documents are stored in the reStructuredText_ format, an open, extensible
-`lightweight markup language`_ that supports publishing to a multitude of
-formats including HTML, EPub and PDF. *struct:ed* facilitates editing of
-reStructuredText documents by providing an environment that frees the user from
-having to remember the syntax for all of the different document elements and
-eliminating the occurrence of syntax errors. Additionally, it represents the
-document in a format that is easy to navigate, for example by displaying the
-section titles in a larger font.
+Documents are stored in the reStructuredText_ format, an open, `extensible
+<test_>`_ `lightweight markup language`_ that supports publishing to a
+multitude of formats including HTML, EPub and PDF. *struct:ed* facilitates
+editing of reStructuredText documents by providing an environment that frees
+the user from having to remember the syntax for all of the different document
+elements and eliminating the occurrence of syntax errors. Additionally, it
+represents the document in a format that is easy to navigate, for example by
+displaying the section titles in a larger font.
 
 These reStructuredText documents need to be stored somewhere, of course. The
 first backend *struct:ed* supports is **GitHub**. Documents are stored in a git
@@ -41,7 +41,7 @@ repository to be able to edit documents stored in it.
 
 
 Current Limitations
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 As this is a only a preview version of struct:ed, there are some limitations
 you should be aware of:
@@ -55,7 +55,7 @@ you should be aware of:
 
 
 Editing a Document
-------------------
+==================
 
 The toolbar at the top helps inserting structural, body and inline elements
 into the document. Hover your mouse pointer over each of the buttons to learn
@@ -71,7 +71,7 @@ keyboard shortcuts.
 
 
 Structural Elements
--------------------
+===================
 
 Structural elements include section titles or **headings**. Use the heading
 toolbar button to toggle between a plain paragraph and a heading. With the text
@@ -101,11 +101,11 @@ a transition. Let's insert a transition below this paragraph.
 
 
 Body Elements
--------------
+=============
 
 
 Paragraphs
-~~~~~~~~~~
+----------
 
 The default body element, created by pressing *Enter*, is the paragraph. You
 can convert some other types of body elements to a paragraph by means of the
@@ -153,7 +153,7 @@ is tagged with a custom role.
 
 
 Block Quotes
-~~~~~~~~~~~~
+------------
 
 The left/right toolbar buttons and corresponding keyboard shortcuts
 increase/decrease the block quote level of a paragraph. Entering two spaces at
@@ -164,7 +164,7 @@ Reality is merely an illusion, albeit a very persistent one.
 
 
 Literal Blocks
-~~~~~~~~~~~~~~
+--------------
 
 Literal blocks can be used for code snippets or other preformatted text. Use
 the *Ctrl-Alt-=* shortcut to convert a paragraph to a literal block or enter
@@ -182,7 +182,7 @@ Note that inline markup is not supported within literal blocks.
 
 
 Lists
-~~~~~
+-----
 
 To convert a paragraph to a **bullet list** item, use the *Ctrl-Alt-B*
 shortcut. A new bullet list can be created by starting a paragraph with a
@@ -198,7 +198,7 @@ item. At this point you have three options:
    start of the second paragraph of the first list item.
 
 **Enumerated lists** are very similar to bullet lists. They can be created by
-starting a paragrah with ``1.`` followed by a space. Paragraphs can be
+starting a paragraph with ``1.`` followed by a space. Paragraphs can be
 transformed to an enumerated list item using the *Ctrl-Alt-E* keyboard
 shortcut.
 
@@ -226,7 +226,7 @@ below. Don't be afraid to perform some experiments here!
 
 
 Comments
-~~~~~~~~
+--------
 
 Comments are discarded when publishing the document. Use these to keep track of
 to-do items or meta-discussions. Create a comment by starting a paragraph with
@@ -237,7 +237,7 @@ paragraph to a comment with the help of the *Ctrl-Alt-C* keyboard shortcut.
 
 
 Directives
-----------
+==========
 
 Directives are an extension mechanism for reStructuredText. Users may define
 custom directives, but a set of directives are already included in the
@@ -248,7 +248,7 @@ directives listed below.
 
 
 Target
-~~~~~~
+------
 
 A target directive provides an anchor for references. The target label is a
 unique ID that to identify the target. The target directive above has the label
@@ -275,7 +275,7 @@ to add an alias target.
 
 
 Subtitution definition
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 The substitution definition directive specifies the replacement text for
 substitutions.
@@ -290,7 +290,7 @@ content field.
 
 
 Custom interpreted text role
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 The role directive can be used to define a custom inline text role. You can
 optionally specify a base role and one or more classes. Refer to the
@@ -306,7 +306,7 @@ The down arrow moves the cursor to the class field.
 
 
 Future
-------
+======
 
 While there is plenty of work left to fix issues in the existing set of
 features, there's already plenty of ideas for enhancing struct:ed. Here's a
